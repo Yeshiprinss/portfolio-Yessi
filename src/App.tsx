@@ -1,12 +1,13 @@
 
 import './App.css'
 import Header from './components/header/header'
+import AboutMe from './components/hero/about-me';
 
 function App() {
   return (
     <>
     <Header />
-      <h1>hello work</h1>
+    <AboutMe />
     </>
   );
 
