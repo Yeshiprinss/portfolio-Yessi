@@ -12,7 +12,7 @@ const Modal = ({ isOpen, onClose, links }) => {
     >
       <div
         className={`transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
-        onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside
+        onClick={(e) => e.stopPropagation()} 
       >
         <ul className="flex flex-col items-center space-y-4 text-white text-xl">
           {links.map((link, index) => (
@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-20 flex justify-between items-center bg-transparent backdrop-blur-md p-8 space-x-9">
-        <button onClick={toggleMenu} className="md:hidden">
+        <button onClick={toggleMenu} className="md:hidden text-white  bg-black bg-opacity-30 rounded-full p-2">
           {isOpen ? (
             <FiX size={24} />
           ) : (
