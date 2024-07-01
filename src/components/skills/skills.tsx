@@ -5,13 +5,14 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 const Skills = () => {
   const [showHtml, setShowHtml] = useState(false);
   const [showCss, setShowCss] = useState(false);
-  const [showReact, setShowReact] = useState(false); // State for React
+  const [showReact, setShowReact] = useState(false);
   const [showTailwind, setShowTailwind] = useState(false);
   const [showJs, setShowJs] = useState(false);
   const [showTs, setShowTs] = useState(false);
   const [showNextjs, setShowNextjs] = useState(false);
   const [showJest, setShowJest] = useState(false);
   const [showFigma, setShowFigma] = useState(false);
+  const [showHeading, setShowHeading] = useState(false); // State for heading
   const [lineLength, setLineLength] = useState(0);
   const skillsRef = useRef<HTMLDivElement>(null);
 
@@ -23,41 +24,44 @@ const Skills = () => {
 
     if (topPos < screenHeight * 0.75) {
       setTimeout(() => {
+        setShowHeading(true);
+      }, 500);
+      setTimeout(() => {
         setShowHtml(true);
         setLineLength(1);
-      }, 500);
+      }, 1000);
       setTimeout(() => {
         setShowCss(true);
         setLineLength(2);
-      }, 1000);
+      }, 1500);
       setTimeout(() => {
         setShowReact(true);
         setLineLength(3);
-      }, 1500);
+      }, 2000);
       setTimeout(() => {
         setShowTailwind(true);
         setLineLength(4);
-      }, 2000);
+      }, 2500);
       setTimeout(() => {
         setShowJs(true);
         setLineLength(5);
-      }, 2500);
+      }, 3000);
       setTimeout(() => {
         setShowTs(true);
         setLineLength(6);
-      }, 3000);
+      }, 3500);
       setTimeout(() => {
         setShowNextjs(true);
         setLineLength(7);
-      }, 3500);
+      }, 4000);
       setTimeout(() => {
         setShowJest(true);
         setLineLength(8);
-      }, 4000);
+      }, 4500);
       setTimeout(() => {
         setShowFigma(true);
         setLineLength(9);
-      }, 4500);
+      }, 5000);
 
       window.removeEventListener('scroll', handleScroll);
     }
@@ -72,8 +76,10 @@ const Skills = () => {
 
   return (
     <div ref={skillsRef} className="bg-black flex flex-col text-center gap-4 py-8 relative min-h-screen">
-      <div className="bg-white bg-opacity-50 border rounded p-3 m-5 w-11/12 md:w-3/4 lg:w-1/2 xl:w-1/3 mx-auto relative z-10">
-        <h3 className="text-3xl font-semibold mb-2">Frontend</h3>
+      <div className="w-11/12 md:w-3/4 lg:w-1/2 xl:w-1/3 mx-auto relative z-10">
+        <h3 className={`bg-opacity-50 border rounded p-3 m-5 bg-white text-3xl font-semibold mb-2 transition-opacity duration-500 ease-in-out ${showHeading ? 'opacity-100' : 'opacity-0'}`}>
+          Frontend
+        </h3>
         <div className="absolute left-0 mt-8 w-full flex flex-wrap justify-center items-center gap-2">
 
           <div className={`transition-opacity duration-500 ease-in-out ${showHtml ? 'opacity-100' : 'opacity-0'}`}>
