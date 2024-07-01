@@ -1,8 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { FaCode, FaServer, FaShieldAlt, IconType } from 'react-icons/fa';
+import { FaCode, FaServer, FaShieldAlt } from 'react-icons/fa';
+import { IconType } from 'react-icons';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './services.css';
 
 interface CardProps {
   title: string;
@@ -13,7 +15,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, Icon, description, items }) => (
   <div className="p-3 md:p-5">
-    <div className=" bg-white bg-opacity-30 p-2 shadow-md rounded-lg overflow-hidden border">
+    <div className="card-container bg-white bg-opacity-30 p-2 shadow-md rounded-lg overflow-hidden border">
       <div className="flex justify-center mt-4">
         <Icon className="text-6xl text-pink-500" />
       </div>
