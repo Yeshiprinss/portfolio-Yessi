@@ -3,6 +3,7 @@ import Header from './components/header/header';
 import AboutMe from './components/hero/about-me';
 import Services from './components/hero/services/services';
 import Backend from './components/skills/backend';
+import Cyber from './components/skills/cyber';
 import Frontend from './components/skills/frontend';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <div className="flex flex-col lg:flex-row mx-auto w-full">
         <Frontend />
         <Backend />
+        <Cyber />
       </div>
     </>
   );
